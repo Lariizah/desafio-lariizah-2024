@@ -38,4 +38,23 @@ describe('Recintos do Zoologico', () => {
     });
 
 });
+    
+ test('Testa recintos para dois macacos', () => {
+  const zoo = new RecintosZoo();
+  const resultado = zoo.analisaRecintos('MACACO', 2);
+  expect(resultado).toEqual({
+    recintosViaveis: [
+      "Recinto 1 (espaço livre: 5 total: 10)", 
+      "Recinto 2 (espaço livre: 3 total: 5)", 
+      "Recinto 3 (espaço livre: 2 total: 7)"
+    ]
+  });
+});
+
+test('Animal inválido', () => {
+  const zoo = new RecintosZoo();
+  const resultado = zoo.analisaRecintos('UNICORNIO', 1);
+  expect(resultado).toEqual({ erro: "Animal inválido" });
+});
+
 
