@@ -67,7 +67,9 @@ analisaRecintos(tipoAnimal, quantidade) {
 const zoo = new RecintosZoo();
 console.log(zoo.analisaRecintos('MACACO', 2)); // Exemplo de execução
 console.log(zoo.analisaRecintos('UNICORNIO', 1)); // Exemplo de erro
-            
+
+// Aqui está o comando export
+export { RecintosZoo as RecintosZoo };
         
 
 
